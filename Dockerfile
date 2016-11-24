@@ -47,4 +47,4 @@ USER "rabbitmq"
 # CMD "$STI_SCRIPTS_PATH/run"
 # CMD "/docker-entrypoint.sh"
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["rabbitmq-server"]
+CMD ["/usr/lib/rabbitmq/bin/rabbitmq-server"]
