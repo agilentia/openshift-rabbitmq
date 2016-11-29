@@ -2,8 +2,8 @@
 set -eu
 
 # allow the container to be started with `--user`
-if [[ "$1" == rabbitmq* ]] && [ "$(id -u)" = '0' ]; then
-	if [ "$1" = 'rabbitmq-server' ]; then
+if [[ "$1" == *rabbitmq* ]] && [ "$(id -u)" = '0' ]; then
+	if [ "$1" = '/usr/lib/rabbitmq/bin/rabbitmq-server' ]; then
 		chown -R rabbitmq /var/lib/rabbitmq
 	fi
 	exec gosu rabbitmq "$BASH_SOURCE" "$@"
