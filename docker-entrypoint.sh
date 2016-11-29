@@ -206,7 +206,7 @@ rabbit_env_config() {
 	join $'\n' "${ret[@]}"
 }
 
-if [ "$1" = 'rabbitmq-server' ] && [ "$haveConfig" ]; then
+if [ "$1" = '/usr/lib/rabbitmq/bin/rabbitmq-server' ] && [ "$haveConfig" ]; then
 	fullConfig=()
 
 	rabbitConfig=(
